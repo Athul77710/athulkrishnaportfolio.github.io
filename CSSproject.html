@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('download.png'); 
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; 
+            max-width: 800px; /* Adjust max-width as needed */
+            margin: 40px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .left, .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+        
+        .left {
+            flex-basis: 50%; 
+            background: linear-gradient(135deg, #007bff, #ff7f00);
+            color: white;
+            padding: 20px;
+        }
+        
+        .right {
+            flex-basis: 50%;
+            background-color: white;
+            padding: 20px;
+        }
+        
+        .form-field {
+            margin-bottom: 15px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-field input, .form-field textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        .required {
+            color: red;
+            font-size: small;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px; 
+            cursor: pointer;
+            align-self: center;
+            display: block;
+            margin: 0 auto; 
+        
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2{
+            padding: 20px;
+            text-align: center;
+        }
+        h1{
+            padding: 20px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <img src="icon.jpeg" alt="My Icon" width="50" height="50">
+        <h1 class="heading text-center" >Let's Chat</h1>
+        <p class="text text-center">Whether you hava a question,want to<br>start a project or simply want to connect
+        <br>
+        ,feel free to send me a meaasge in the <br>contact form.</p>
+        </div>
+    <div class="right">
+        <h2>Contact</h2>
+        <form action="/submit-your-form" method="post">
+            <div class="form-field">
+                <label for="name"><span class="required">required*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-field">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-field">
+                <label for="company"></label>
+                <input type="text" id="company" name="company" placeholder="Company">
+            </div>
+            <div class="form-field">
+                <label for="phone"></label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+            </div>
+            <div class="form-field">
+                <label for="message"></label>
+                <textarea id="message" name="message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
